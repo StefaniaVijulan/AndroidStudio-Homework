@@ -46,11 +46,11 @@ public class HomeFragment extends Fragment {
         newsArrayList = new ArrayList<News>();
 
         newHeading = new String[]{
-                "atletism text mainActivity",
-                "basket text mainActivity",
-                "football text mainActivity","innot text mainActivity",
-                "tennis text mainActivity",
-                "volley text mainActivity"
+                "Atletism",
+                "Basketball",
+                "Football",
+                "Tennis",
+                "Volleyball"
         };
         imageResourceId = new int[]{
                 R.drawable.atletism,

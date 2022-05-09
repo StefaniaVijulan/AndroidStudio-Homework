@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudio-Homework/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1725" />
+        <entry key="..\:/AndroidStudio-Homework/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1" />
         <entry key="..\:/AndroidStudio-Homework/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1725" />
-        <entry key="..\:/AndroidStudio-Homework/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/AndroidStudio-Homework/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/AndroidStudio-Homework/app/src/main/res/layout/appbar_home_drawer.xml" value="0.1" />
         <entry key="..\:/AndroidStudio-Homework/app/src/main/res/layout/content_home.xml" value="0.1" />
         <entry key="..\:/AndroidStudio-Homework/app/src/main/res/layout/fragment_home.xml" value="0.1" />
@@ -13,7 +14,7 @@
         <entry key="..\:/AndroidStudio-Homework/app/src/main/res/layout/list_item.xml" value="0.1" />
         <entry key="..\:/AndroidStudio-Homework/app/src/main/res/layout/settings_home.xml" value="0.1" />
         <entry key="..\:/AndroidStudio-Homework/app/src/main/res/layout/toolbar.xml" value="0.1" />
-        <entry key="..\:/AndroidStudio-Homework/app/src/main/res/menu/bottom_navigation.xml" value="0.11614583333333334" />
+        <entry key="..\:/AndroidStudio-Homework/app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
         <entry key="..\:/AndroidStudio-Homework/app/src/main/res/menu/menu_item.xml" value="0.25" />
         <entry key="..\:/Users/Stefania Vijulan/Desktop/New folder (2)/AndroidStudio-Homework/app/src/main/res/layout/fragment_home.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/Stefania Vijulan/Desktop/TemaAndroid/app/src/main/res/layout/activity_main.xml" value="0.2" />
