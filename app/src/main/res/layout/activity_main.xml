@@ -20,13 +20,7 @@
       android:layout_alignParentBottom="true"
       app:menu="@menu/bottom_navigation"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:id="@+id/recycleView"
-        tools:ignore="MissingConstraints"
-        app:menu="@menu/menu_item"/>
+
 
 
 </RelativeLayout>
