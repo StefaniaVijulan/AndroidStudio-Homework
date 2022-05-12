@@ -19,7 +19,20 @@
       android:layout_height="wrap_content"
       android:layout_alignParentBottom="true"
       app:menu="@menu/bottom_navigation"/>
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="Landscape"
+      android:id="@+id/landscape"></Button>
 
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/landscape"
+      android:layout_centerInParent="true"
+      android:text="Portrait"
+      android:id="@+id/portait"></Button>
 
 
 
