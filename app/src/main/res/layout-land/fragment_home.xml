@@ -21,7 +21,7 @@
         android:id="@+id/portait"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="280dp"
+        android:layout_marginLeft="554dp"
         android:layout_marginTop="10dp"
         android:text="Portrait"></Button>
 
@@ -29,7 +29,7 @@
         android:id="@+id/landscape"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="280dp"
+        android:layout_marginLeft="554dp"
         android:layout_marginTop="50dp"
         android:text="Landscape"></Button>
 
