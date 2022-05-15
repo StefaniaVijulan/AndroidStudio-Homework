@@ -17,5 +17,21 @@
         android:id="@+id/recycleView"
         tools:ignore="MissingConstraints"
         app:menu="@menu/menu_item"/>
+    <Button
+        android:id="@+id/portait"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="10dp"
+        android:text="Portrait"></Button>
+
+    <Button
+        android:id="@+id/landscape"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="60dp"
+        android:text="Landscape"></Button>
+
 
 </RelativeLayout>

@@ -1,5 +1,8 @@
 package com.example.applicationapp;
 
+import static android.app.Activity.RESULT_CANCELED;
+import static android.app.Activity.RESULT_OK;
+
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
@@ -13,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
@@ -22,27 +26,31 @@ import androidx.fragment.app.Fragment;
 
 public class ContactsFragment extends Fragment {
 
-    ImageView imageView;
-    Button btOpen;
+    public static final String EXTRA_INFO = "default";
+    private Button btnCapture;
+    private ImageView imgCapture;
+    private static final int Image_Capture_Code = 1;
+
     View secondFr;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         secondFr = inflater.inflate(R.layout.fragment_contacts, container, false);
-        imageView = secondFr.findViewById(R.id.image_view);
-        btOpen = secondFr.findViewById(R.id.bt_open);
+        btnCapture = secondFr.findViewById(R.id.bt_open);
+        imgCapture = secondFr.findViewById(R.id.image_view);
 
-
-        if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+        if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(getActivity(), new String[]{
-                    Manifest.permission.CAMERA
+                    Manifest.permission.CAMERA,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE
             }, 100);
         }
-        btOpen.setOnClickListener(new View.OnClickListener() {
+        btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 100);
+                Intent cInt = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cInt,Image_Capture_Code);
             }
         });
         Intent sendIntent = new Intent();
@@ -55,15 +63,19 @@ public class ContactsFragment extends Fragment {
 
 
 
-        return inflater.inflate(R.layout.fragment_contacts, container, false);
+        return secondFr;
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if(requestCode == 100){
-            Bitmap captureImage = (Bitmap)  data.getExtras().get("data");
 
-            imageView.setImageBitmap(captureImage);
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == Image_Capture_Code) {
+            if (resultCode == RESULT_OK) {
+                Bitmap bp = (Bitmap) data.getExtras().get("data");
+                imgCapture.setImageBitmap(bp);
+            } else if (resultCode == RESULT_CANCELED) {
+                Toast.makeText(getActivity(), "Cancelled", Toast.LENGTH_LONG).show();
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 package com.example.applicationapp;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 
@@ -8,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.SearchView;
 
@@ -26,6 +28,7 @@ public class HomeFragment extends Fragment {
     RecyclerView recyclerView;
     ArrayList<News> newsArrayList;
     MyAdapter myAdapter;
+    Button landscape,portait;
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     FrameLayout frameLayout;
@@ -38,6 +41,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         setHasOptionsMenu(true);
+
         homeFr = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerView = homeFr.findViewById(R.id.recycleView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -75,6 +79,24 @@ public class HomeFragment extends Fragment {
        // getData();
 
         //return inflater.inflate(R.layout.fragment_home, container, false);
+
+        landscape=homeFr.findViewById(R.id.landscape);
+        portait=homeFr.findViewById(R.id.portait);
+
+        landscape.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+            }
+        });
+
+        portait.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            }
+        });
         return homeFr;
     }
 
